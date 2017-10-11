@@ -1,13 +1,11 @@
 <template>
   <section>
-
-    <div class="toggle-button-wrapper"  v-tap="{ methods : onTap }">
+    <div class="toggle-button-wrapper" v-tap="{ methods : onTap }">
       <div class="toggle-button">
         <span :class="[isOpen ? 'toggle-button-cross' :'']"></span>
         <span :class="[isOpen ? 'toggle-button-cross' :'']"></span>
       </div>
     </div>
-
     <div class="slider-menu" :class="[isOpen ? 'openMenu' :'']">
       <nav>
         <ul class="menu-list">
@@ -85,22 +83,45 @@
   }
 
   .toggle-button:first-child {
-    -webkit-animation: nav_bar_top02 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
-    animation: nav_bar_top02 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
+    /*animation-name: crossBack;*/
+    /*animation-duration: 0.7s;*/
+    -webkit-animation: cross 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
+    animation: cross 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
     top: 4px;
   }
 
   .toggle-button span:nth-child(2) {
-    -webkit-animation: nav_bar_bottom02 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
-    animation: nav_bar_bottom02 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
+    animation-name: crossBack;
+    animation-duration: 0.7s;
+    -webkit-animation: cross 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
+    animation: cross 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
     bottom: 9px;
   }
 
   .toggle-button-cross {
-    /*-webkit-animation: nav_bar_bottom 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s forwards;*/
-    /*animation: nav_bar_bottom 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s forwards;*/
+    animation-name: cross;
+    animation-duration: 0.7s;
+    animation: anime1 5s ease -2s infinite alternate;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
+  }
+  
+  @keyframes cross {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+
+  @keyframes crossBack {
+    0% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 
   .slider-menu {
@@ -122,11 +143,21 @@
   }
 
   .openMenu {
+    animation-name: fadeIn;
+    animation-duration: 0.7s;
     -webkit-transform: translateX(17px);
     transform: translateX(17px);
     -webkit-transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
     transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
+  }
 
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .menu-list {
