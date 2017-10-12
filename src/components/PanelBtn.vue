@@ -21,11 +21,13 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: #fff;
+    /*3本メニューの周りを囲む場合*/
+    /*background: #fff;*/
   }
 
   #panel-btn:hover {
-    background: #fafafa;
+    /*3本メニューの周りを囲んでHoverアクションをつける場合*/
+    /*background: #fafafa;*/
   }
 
   #panel-btn-icon {
@@ -33,10 +35,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 14px;
-    height: 2px;
-    margin: -1px 0 0 -7px;
-    background: #2196F3;
+    width: 28px;
+    height: 4px;
+    margin: -2px 0 0 -14px;
+    background: #000;
     transition: .2s;
   }
 
@@ -46,18 +48,18 @@
     position: absolute;
     top: 50%;
     left: 0;
-    width: 14px;
-    height: 2px;
-    background: #2196F3;
+    width: 28px;
+    height: 4px;
+    background: #000;
     transition: .3s;
   }
 
   #panel-btn-icon:before {
-    margin-top: -6px;
+    margin-top: -12px;
   }
 
   #panel-btn-icon:after {
-    margin-top: 4px;
+    margin-top: 8px;
   }
 
   #panel-btn .close {
@@ -76,6 +78,27 @@
   #panel-btn .close:after {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
+  }
+
+  @media only screen and (max-width: 414px) {
+    #panel-btn-icon {
+      width: 14px;
+      height: 2px;
+      margin: -1px 0 0 -7px;
+    }
+
+    #panel-btn-icon:before, #panel-btn-icon:after {
+      width: 14px;
+      height: 2px;
+    }
+
+    #panel-btn-icon:before {
+      margin-top: -6px;
+    }
+
+    #panel-btn-icon:after {
+      margin-top: 4px;
+    }
   }
 
 </style>

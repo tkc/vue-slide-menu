@@ -67,8 +67,8 @@
     top: 20px;
     right: 20px;
     z-index: 9999;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
   }
 
   .slider-menu {
@@ -118,6 +118,12 @@
 
   .menu-list li a {
     color: #fff;
+  }
+  @media only screen and (max-width: 414px) {
+    .toggle-button-wrapper {
+      width: 40px;
+      height: 40px;
+    }
   }
 
 </style>
