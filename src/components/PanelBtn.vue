@@ -21,13 +21,13 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    /*3本メニューの周りを囲む場合*/
+    /*on hover background white */
     /*background: #fff;*/
   }
 
   #panel-btn:hover {
-    /*3本メニューの周りを囲んでHoverアクションをつける場合*/
-    /*background: #fafafa;*/
+    /*on hover background white */
+    background: #fafafa;
   }
 
   #panel-btn-icon {
@@ -99,6 +99,6 @@
     #panel-btn-icon:after {
       margin-top: 4px;
     }
-  }
 
+  }
 </style>
