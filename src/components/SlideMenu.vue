@@ -1,9 +1,8 @@
 <template>
   <section>
     <div class="toggle-button-wrapper" v-tap="{ methods : onTap }">
-      <div class="toggle-button">
-        <span :class="[isOpen ? 'toggle-button-cross' :'']"></span>
-        <span :class="[isOpen ? 'toggle-button-cross' :'']"></span>
+      <div id="panel-btn">
+        <span id="panel-btn-icon" :class="[isOpen ? 'close' :'']"></span>
       </div>
     </div>
     <div class="slider-menu" :class="[isOpen ? 'openMenu' :'']">
@@ -56,7 +55,69 @@
 </script>
 
 <style scoped>
-
+  .toggle-button-wrapper {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+  }
+  #panel-btn{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 20px 0 10px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  #panel-btn:hover{
+    background: #fafafa;
+  }
+  #panel-btn-icon{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 2px;
+    margin: -1px 0 0 -7px;
+    background: #2196F3;
+    transition: .2s;
+  }
+  #panel-btn-icon:before, #panel-btn-icon:after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 2px;
+    background: #2196F3;
+    transition: .3s;
+  }
+  #panel-btn-icon:before{
+    margin-top: -6px;
+  }
+  #panel-btn-icon:after{
+    margin-top: 4px;
+  }
+  #panel-btn .close{
+    background: transparent;
+  }
+  #panel-btn .close:before, #panel-btn .close:after{
+    margin-top: 0;
+  }
+  #panel-btn .close:before{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  #panel-btn .close:after{
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+/*
   .toggle-button-wrapper {
     position: fixed;
     top: 10px;
@@ -83,8 +144,6 @@
   }
 
   .toggle-button:first-child {
-    /*animation-name: crossBack;*/
-    /*animation-duration: 0.7s;*/
     -webkit-animation: cross 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
     animation: cross 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
     top: 4px;
@@ -105,7 +164,7 @@
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }
-  
+
   @keyframes cross {
     0% {
       transform: rotate(0deg);
@@ -123,7 +182,7 @@
       transform: rotate(0deg);
     }
   }
-
+*/
   .slider-menu {
     z-index: 99;
     position: fixed;
