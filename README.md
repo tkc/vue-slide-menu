@@ -1,6 +1,8 @@
 # vue-slide-menu
 
-> A Vue.js project
+
+<img width="1483" alt="screen shot 2017-10-12 at 14 07 50" src="https://user-images.githubusercontent.com/181991/31480111-cb317b70-af56-11e7-8a66-ca982802b51f.png">
+
 
 ## Build Setup
 
