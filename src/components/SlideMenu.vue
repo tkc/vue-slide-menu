@@ -62,6 +62,7 @@
 </script>
 
 <style scoped>
+
   .toggle-button-wrapper {
     position: fixed;
     top: 20px;
@@ -119,6 +120,7 @@
   .menu-list li a {
     color: #fff;
   }
+
   @media only screen and (max-width: 414px) {
     .toggle-button-wrapper {
       width: 40px;
