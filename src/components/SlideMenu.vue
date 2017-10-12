@@ -64,8 +64,8 @@
 <style scoped>
   .toggle-button-wrapper {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     z-index: 9999;
     width: 40px;
     height: 40px;

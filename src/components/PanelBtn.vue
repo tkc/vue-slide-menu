@@ -20,7 +20,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    margin: 20px 0 10px;
     border-radius: 50%;
     background: #fff;
   }
