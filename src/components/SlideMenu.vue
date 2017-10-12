@@ -2,7 +2,7 @@
   <section>
     <div class="toggle-button-wrapper" v-tap="{ methods : onTap }">
       <panel_btn
-        :is_open="isOpenProp"
+        :is_open="isOpen"
       ></panel_btn>
     </div>
     <div class="slider-menu" :class="[isOpen ? 'openMenu' :'']">
